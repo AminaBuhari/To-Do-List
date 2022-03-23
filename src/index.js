@@ -4,12 +4,12 @@ const listElement = document.getElementById('lists-todo');
 const lists = [
   {
     index: 1,
-    description: 'lorem',
+    description: 'Wash the dishes',
     completed: false,
   },
   {
     index: 2,
-    description: 'Wash',
+    description: 'complete To Do list project',
     completed: false,
   },
 ];
