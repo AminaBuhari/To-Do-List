@@ -1,3 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 body {
-  background-color: blueviolet;
+  background-color: grey;
+  width: 60%;
+  margin: 18px auto;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
 }
+h1{
+  text-align: center;
+  margin: 0;
+}
+#lists-todo{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.list{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  border-bottom: 2px solid lightgray;
+
+}
+.listblock{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.list-container{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  border-style: 2px solid black;
+  background-color: white;
+}
+
+.input{
+  width: 90%;
+  border: 0;
+  font-style: italic;
+  padding: 15px 5%;
+  border-top: 1px solid lightgray;
+  border-bottom: 2px solid lightgray;
+  font-family: "Poppins", sans-serif;
+
+}
+
+button{
+  align-self: center;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+.elipse{
+  background-color: white;
+  border: 0;
+  color: lightgray;
+  font-size: 24px;
+}
+
+.header{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 8px 5%;
+}
+
+.clear{
+  width: 100%;
+  border: 0;
+  padding: 8px;
+}
+

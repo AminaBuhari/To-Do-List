@@ -3,9 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wbpack Exercise</title>
+    <title>To Do List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
-    <h1>Hello webpack!</h1>
+    <div class="list-container">
+      <div class="header">
+        <h1>Today's To Do</h1>
+        <i class="fa fa-refresh"></i>
+      </div>
+      <input
+        type="text"
+        name=" text"
+        class="input"
+        placeholder="Add to your list..."
+      />
+      <ul class="lists" id="lists-todo">
+        <!-- <li class="list">
+          <div class="listblock">
+            <input type="checkbox" name="checkbox" />
+            <p>Wash dishes</p>
+          </div>
+          <button class="elipse"><i class="fa fa-ellipsis-v"></i></button>
+        </li>
+        <li class="list">
+          <div class="listblock">
+            <input type="checkbox" name="checkbox" />
+            <p>Wash dishes</p>
+          </div>
+          <button class="elipse"><i class="fa fa-ellipsis-v"></i></button>
+        </li> -->
+      </ul>
+      <button class="clear">Clear all completed</button>
+    </div>
   </body>
 </html>

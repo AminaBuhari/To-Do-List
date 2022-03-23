@@ -1,12 +1,30 @@
 import './style.css';
 
-function component() {
-  const element = document.createElement('div');
+const listElement = document.getElementById('lists-todo');
+const lists = [
+  {
+    index: 1,
+    description: 'lorem',
+    completed: false,
+  },
+  {
+    index: 2,
+    description: 'Wash',
+    completed: false,
+  },
+];
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+lists.forEach((list) => {
+  const listHTML = `<li class="list">
+<div class="listblock">
+  <input type="checkbox" name="checkbox" />
+  <p>${list.description}</p>
+</div>
+<button class="elipse"><i class="fa fa-ellipsis-v"></i></button>
+</li>`;
+  listElement.insertAdjacentHTML('beforeend', listHTML);
+});
 
-  return element;
-}
+window.onload = () => {
 
-document.body.appendChild(component());
+};
