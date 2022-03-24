@@ -9,7 +9,7 @@ const lists = [
   },
   {
     index: 2,
-    description: 'complete To Do list project',
+    description: 'complete To Do list',
     completed: false,
   },
 ];
@@ -24,7 +24,3 @@ lists.forEach((list) => {
 </li>`;
   listElement.insertAdjacentHTML('beforeend', listHTML);
 });
-
-window.onload = () => {
-
-};
