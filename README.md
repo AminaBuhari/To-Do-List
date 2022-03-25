@@ -1,6 +1,6 @@
 # To-Do-List
 
-This project is done to help understand Javascript and webpack bundles.
+This project,implements the CRUD (create, update, delete) methods. All the elements of the user interface are fully functional to allow user add and remove a todo list.
 
 ## Built With
 
@@ -18,10 +18,14 @@ For a live demo of the Portfolio [click here]().
 👤 **Aminat Buhari**
 
 - GitHub: [@AminaBuhari](https://github.com/AminaBuhari)
+- Twitter: [@isaacpitwa](https://twitter.com/AminaBuhari)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/Aminat-Buhari)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
 
 ## Show your support
 
