@@ -1,3 +1,5 @@
+![](https://img.shields.io/badge/Microverse-blueviolet)
+
 # To-Do-List
 
 This project,implements the CRUD (create, update, delete) methods. All the elements of the user interface are fully functional to allow user add and remove a todo list.
@@ -18,8 +20,8 @@ For a live demo of the Portfolio [click here]().
 👤 **Aminat Buhari**
 
 - GitHub: [@AminaBuhari](https://github.com/AminaBuhari)
-- Twitter: [@isaacpitwa](https://twitter.com/AminaBuhari)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/Aminat-Buhari)
+- Twitter: [@AminaBuhari](https://twitter.com/AminaBuhari)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/Amina)
 
 ## 🤝 Contributing
 
