@@ -13,8 +13,6 @@ This project,implements the CRUD (create, update, delete) methods. All the eleme
 
 ## Live Demo
 
-For a live demo of the Portfolio [click here]().
-
 ## Author
 
 👤 **Aminat Buhari**
