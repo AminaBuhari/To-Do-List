@@ -38,7 +38,7 @@ h1 {
   background-color: white;
 }
 
-.input {
+.input-todo {
   width: 90%;
   border: 0;
   font-style: italic;
@@ -46,6 +46,11 @@ h1 {
   border-top: 1px solid lightgray;
   border-bottom: 2px solid lightgray;
   font-family: "Poppins", sans-serif;
+}
+
+#reload {
+  background-color: transparent;
+  border: 0;
 }
 
 p {
@@ -63,6 +68,7 @@ button {
   border: 0;
   color: lightgray;
   font-size: 24px;
+  padding-top: 10px;
 }
 
 .header {
@@ -76,4 +82,16 @@ button {
   width: 100%;
   border: 0;
   padding: 8px;
+}
+
+.hide {
+  display: none;
+}
+
+.edit,
+.delete {
+  background-color: white;
+  border: 0;
+  color: lightgray;
+  font-size: 24px;
 }

@@ -1,6 +1,6 @@
 import './style.css';
 import {
-  addTodo, displayList, getData, getIsEditing, saveEdit, clearCompleted,
+  addTodo, displayList, getData, getEdit, saveEdit, clearDoneList,
 } from './function.js';
 
 window.onload = () => {
@@ -8,22 +8,21 @@ window.onload = () => {
   displayList();
 };
 
-const refreshBtn = document.getElementById('reload');
-refreshBtn.addEventListener('click', () => {
+const reload = document.getElementById('reload');
+reload.addEventListener('click', () => {
   window.location.reload();
 });
 
 const desc = document.querySelector('#input-todo');
 desc.addEventListener('keyup', (event) => {
-  // Number 13 is the "Enter" key on the keyboard
   if (event.keyCode === 13) {
     event.preventDefault();
-    if (!getIsEditing())addTodo();
+    if (!getEdit())addTodo();
     else saveEdit();
   }
 });
 
-const clearBtn = document.getElementById('clear');
-clearBtn.addEventListener('click', () => {
-  clearCompleted();
+const clear = document.getElementById('clear');
+clear.addEventListener('click', () => {
+  clearDoneList();
 });

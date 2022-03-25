@@ -1,4 +1,4 @@
-# Web-pack
+# To-Do-List
 
 This project is done to help understand Javascript and webpack bundles.
 

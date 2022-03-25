@@ -25,7 +25,70 @@ const toggleListCheck = (todo) => {
   save();
 };
 
+const displayList = () => {
+  const listElement = document.getElementById('lists-todo');
+  listElement.innerHTML = '';
+  for (let i = 0; i < addlists.length; i += 1) {
+    const todoElement = document.createElement('li');
+    todoElement.classList.add('list');
 
+    // todo-Content
+    const todoContent = document.createElement('div');
+    todoContent.classList.add('listblock');
+
+    const checkbox = document.createElement('input');
+    checkbox.setAttribute('type', 'checkbox');
+    checkbox.setAttribute('name', 'checkbox');
+    checkbox.checked = addlists[i].completed;
+    checkbox.addEventListener('change', () => {
+      toggleListCheck(addlists[i]);
+    });
+
+    const desc = document.createElement('p');
+    desc.innerText = addlists[i].description;
+
+    todoContent.appendChild(checkbox);
+    todoContent.appendChild(desc);
+
+    const listButton = document.createElement('div');
+    listButton.classList.add('actions');
+    const toEdit = document.createElement('button');
+    toEdit.classList.add('edit');
+    toEdit.classList.add('hide');
+    toEdit.setAttribute('type', 'button');
+    toEdit.innerHTML = '<i class="fa fa-edit"></i>';
+    toEdit.addEventListener('click', () => {
+      editTodo(addlists[i]);
+    });
+
+    const removeList = document.createElement('button');
+    removeList.classList.add('delete');
+    removeList.classList.add('hide');
+    removeList.setAttribute('type', 'button');
+    removeList.innerHTML = '<i class="fa fa-trash">';
+    removeList.addEventListener('click', () => {
+      removeTodo(addlists[i].index);
+    });
+
+    const settingBtn = document.createElement('button');
+    settingBtn.classList.add('elipse');
+    settingBtn.setAttribute('type', 'button');
+    settingBtn.innerHTML = '<i class="fa fa-ellipsis-v"></i>';
+    settingBtn.addEventListener('click', () => {
+      toEdit.classList.toggle('hide');
+      removeList.classList.toggle('hide');
+    });
+
+    listButton.appendChild(toEdit);
+    listButton.appendChild(removeList);
+    listButton.appendChild(settingBtn);
+
+    todoElement.appendChild(todoContent);
+    todoElement.appendChild(listButton);
+    listElement.appendChild(todoElement);
+  }
+  save();
+};
 
 const addTodo = () => {
   const desc = document.querySelector('#input-todo');
@@ -74,18 +137,18 @@ const removeTodo = (index_) => {
   displayList();
 };
 
-const getIsEditing = () => isEditing;
+const getEdit = () => isEditing;
 
-const clearCompleted = () => {
-  const completedTodos = addlists.filter((todo) => todo.completed);
-  if (completedTodos.length > 0) {
-    completedTodos.forEach((todo) => {
+const clearDoneList = () => {
+  const completedaddlists = addlists.filter((todo) => todo.completed);
+  if (completedaddlists.length > 0) {
+    completedaddlists.forEach((todo) => {
       removeTodo(todo.index);
-      clearCompleted();
+      clearDoneList();
     });
   }
 };
 
 export {
-  addTodo, getData, displayList, removeTodo, getIsEditing, saveEdit, clearCompleted,
+  addTodo, getData, displayList, removeTodo, getEdit, saveEdit, clearDoneList,
 };
