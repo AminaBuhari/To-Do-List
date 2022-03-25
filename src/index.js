@@ -1,30 +1,28 @@
 import './style.css';
-
-const listElement = document.getElementById('lists-todo');
-const lists = [
-  {
-    index: 1,
-    description: 'Wash the dishes',
-    completed: false,
-  },
-  {
-    index: 2,
-    description: 'complete To Do list project',
-    completed: false,
-  },
-];
-
-lists.forEach((list) => {
-  const listHTML = `<li class="list">
-<div class="listblock">
-  <input type="checkbox" name="checkbox" />
-  <p>${list.description}</p>
-</div>
-<button class="elipse"><i class="fa fa-ellipsis-v"></i></button>
-</li>`;
-  listElement.insertAdjacentHTML('beforeend', listHTML);
-});
+import {
+  addTodo, displayList, getData, getEdit, saveEdit, clearDoneList,
+} from './function.js';
 
 window.onload = () => {
-
+  getData();
+  displayList();
 };
+
+const reload = document.getElementById('reload');
+reload.addEventListener('click', () => {
+  window.location.reload();
+});
+
+const desc = document.querySelector('#input-todo');
+desc.addEventListener('keyup', (event) => {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    if (!getEdit())addTodo();
+    else saveEdit();
+  }
+});
+
+const clear = document.getElementById('clear');
+clear.addEventListener('click', () => {
+  clearDoneList();
+});

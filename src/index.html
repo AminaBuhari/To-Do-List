@@ -13,31 +13,21 @@
     <div class="list-container">
       <div class="header">
         <h1>Today's To Do</h1>
-        <i class="fa fa-refresh"></i>
+        <button type="button" id="reload">
+          <i class="fa fa-refresh"></i>
+        </button>
       </div>
       <input
         type="text"
         name=" text"
-        class="input"
+        class="input-todo"
+        id="input-todo"
         placeholder="Add to your list..."
       />
-      <ul class="lists" id="lists-todo">
-        <!-- <li class="list">
-          <div class="listblock">
-            <input type="checkbox" name="checkbox" />
-            <p>Wash dishes</p>
-          </div>
-          <button class="elipse"><i class="fa fa-ellipsis-v"></i></button>
-        </li>
-        <li class="list">
-          <div class="listblock">
-            <input type="checkbox" name="checkbox" />
-            <p>Wash dishes</p>
-          </div>
-          <button class="elipse"><i class="fa fa-ellipsis-v"></i></button>
-        </li> -->
-      </ul>
-      <button class="clear">Clear all completed</button>
+      <ul class="lists" id="lists-todo"></ul>
+      <button class="clear" type="button" id="clear">
+        Clear all completed
+      </button>
     </div>
   </body>
 </html>
