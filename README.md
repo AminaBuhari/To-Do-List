@@ -13,6 +13,8 @@ This project,implements the CRUD (create, update, delete) methods. All the eleme
 
 ## Live Demo
 
+For a live demo of the Portfolio [click here](https://aminabuhari.github.io/To-Do-List/)
+
 ## Author
 
 👤 **Aminat Buhari**
@@ -25,13 +27,15 @@ This project,implements the CRUD (create, update, delete) methods. All the eleme
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/AminaBuhari/To-Do-List/issues).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
+
+- My morning section teammates ⭐️
 
 ## 📝 License
 
