@@ -1,7 +1,8 @@
 import './style.css';
 import {
-  addTodo, displayList, getData, getEdit, saveEdit, clearDoneList,
+  addTodo, displayList, getData, getEdit, saveEdit,
 } from './function.js';
+import clearAll from './completed.js';
 
 window.onload = () => {
   getData();
@@ -22,7 +23,4 @@ desc.addEventListener('keyup', (event) => {
   }
 });
 
-const clear = document.getElementById('clear');
-clear.addEventListener('click', () => {
-  clearDoneList();
-});
+clearAll();
