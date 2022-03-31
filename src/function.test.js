@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { addTodo, removeTodo, getData } from './function.js';
+import { addTodo, removeTodo } from './function.js';
 
 let before;
 let after;
@@ -92,4 +92,4 @@ describe('delete a number', () => {
     const arr = JSON.parse(localStorage.addlists);
     expect(arr).toHaveLength((before.length - 1));
   });
-})
+});

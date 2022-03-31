@@ -23,8 +23,4 @@ desc.addEventListener('keyup', (event) => {
   }
 });
 
-
 clearAll();
-
-
-
