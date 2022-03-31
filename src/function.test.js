@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { addTodo, removeTodo } from './function.js';
+import { addTodo, removeTodo, getData } from './function.js';
 
 // const fs = require('fs');
 
@@ -45,7 +45,12 @@ describe('add a number', () => {
     after = document.querySelectorAll('#lists-todo li');
     expect(after).toHaveLength((before.length + 1));
   });
-})
+
+    test('Add one new item into Local Storage', () => {
+      const arr = JSON.parse(localStorage.addlists);
+      expect(arr.length).toBe((before.length + 1));
+    });
+  });
 
 describe('delete a number', () => {
   // beforeAll(() => {
@@ -84,5 +89,10 @@ describe('delete a number', () => {
   test('delete one new item to the list', () => {
     after = document.querySelectorAll('#lists-todo li');
     expect(after).toHaveLength((before.length - 1));
+  });
+
+  test('Remove one item from Local Storage', () => {
+    const arr = JSON.parse(localStorage.addlists);
+    expect(arr.length).toBe((before.length - 1));
   });
 })
