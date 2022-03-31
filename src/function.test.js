@@ -4,15 +4,12 @@
 
 import { addTodo, removeTodo, getData } from './function.js';
 
-// const fs = require('fs');
-
 let before;
 let after;
 let inputText;
 
 describe('add a number', () => {
   beforeAll(() => {
-    // document.body.innerHTML = fs.readFileSync('dist/index.html');
     document.body.innerHTML = `
     <div class="list-container">
         <div class="header">
@@ -46,16 +43,15 @@ describe('add a number', () => {
     expect(after).toHaveLength((before.length + 1));
   });
 
-    test('Add one new item into Local Storage', () => {
-      const arr = JSON.parse(localStorage.addlists);
-      expect(arr.length).toBe((before.length + 1));
-    });
+  test('Add one new item into Local Storage', () => {
+    const arr = JSON.parse(localStorage.addlists);
+    expect(arr.length).toBe((before.length + 1));
   });
+});
 
 describe('delete a number', () => {
-  // beforeAll(() => {
-  // document.body.innerHTML = fs.readFileSync('dist/index.html');
-  document.body.innerHTML = `
+  beforeAll(() => {
+    document.body.innerHTML = `
     <div class="list-container">
         <div class="header">
             <h1>Today's To Do</h1>
@@ -77,9 +73,10 @@ describe('delete a number', () => {
         </button>
     </div>
   `;
-  inputText = document.getElementById('input-todo');
-  inputText.value = 'Mock Test';
-  // });
+    inputText = document.getElementById('input-todo');
+    inputText.value = 'Mock Test';
+  });
+
   beforeEach(() => {
     addTodo();
     before = document.querySelectorAll('#lists-todo li');
@@ -93,6 +90,6 @@ describe('delete a number', () => {
 
   test('Remove one item from Local Storage', () => {
     const arr = JSON.parse(localStorage.addlists);
-    expect(arr.length).toBe((before.length - 1));
+    expect(arr).toHaveLength((before.length - 1));
   });
 })
