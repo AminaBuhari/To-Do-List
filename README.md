@@ -15,6 +15,17 @@ This project,implements the CRUD (create, update, delete) methods. All the eleme
 
 For a live demo of the Portfolio [click here](https://aminabuhari.github.io/To-Do-List/)
 
+## Getting Started
+
+To get a local copy up and running follow this simple step:
+
+- Clone repository to your local machine: `git@github.com:AminaBuhari/To-Do-List.git`
+- Run `npm install` to install dependencies
+
+### Run Tests
+- Install jest framework: `npm install --save-dev jest`
+- Run `npm run test`
+
 ## Author
 
 👤 **Aminat Buhari**
