@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { addTodo, removeTodo, editTodo } from './function.js';
+import { addTodo, removeTodo, editTodo, saveEdit } from './function.js';
 
 let before;
 let after;
@@ -88,5 +88,11 @@ describe('Edit the todo', () => {
   test('edit the test', () => {
     const arr = JSON.parse(localStorage.addlists);
     expect(arr[0].description).toEqual(inputText.value);
+  });
+
+  test('edit the test', () => {
+    saveEdit();
+    const arr = JSON.parse(localStorage.addlists);
+    expect(arr[0].description).not.toEqual(inputText.value);
   });
 });
