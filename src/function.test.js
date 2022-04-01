@@ -2,7 +2,11 @@
  * @jest-environment jsdom
  */
 
-import { addTodo, removeTodo, editTodo, saveEdit, toggleListCheck, clearDoneList } from './function.js';
+import {
+  addTodo, removeTodo, editTodo, saveEdit, toggleListCheck, clearDoneList,
+} from './function.js';
+
+import clearAll from './completed.js';
 
 let before;
 let after;
@@ -75,7 +79,6 @@ describe('delete a number', () => {
 });
 
 describe('Edit the todo', () => {
-  document.innerHTML = ourHtml; 
   beforeAll(() => {
     document.body.innerHTML = ourHtml;
     inputText = document.getElementById('input-todo');
@@ -98,7 +101,6 @@ describe('Edit the todo', () => {
 });
 
 describe('Update the status of the todo', () => {
-  document.innerHTML = ourHtml; 
   beforeAll(() => {
     document.body.innerHTML = ourHtml;
     inputText = document.getElementById('input-todo');
@@ -115,5 +117,14 @@ describe('Update the status of the todo', () => {
     const arr = JSON.parse(localStorage.addlists);
     toggleListCheck(arr[0]);
     const array = JSON.parse(localStorage.addlists);
-    expect(array[0].completed).toBe(true);  });
+    expect(array[0].completed).toBe(true);
+  });
+});
+
+describe('Clear all completed todos', () => {
+  test('check updated status', () => {
+    clearDoneList();
+    const arr = JSON.parse(localStorage.addlists);
+    expect(arr.length).toBe(1);
+  });
 });
