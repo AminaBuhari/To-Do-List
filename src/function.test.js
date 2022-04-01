@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { addTodo, removeTodo, editTodo, saveEdit } from './function.js';
+import { addTodo, removeTodo, editTodo, saveEdit, toggleListCheck } from './function.js';
 
 let before;
 let after;
@@ -95,4 +95,25 @@ describe('Edit the todo', () => {
     const arr = JSON.parse(localStorage.addlists);
     expect(arr[0].description).not.toEqual(inputText.value);
   });
+});
+
+describe('Update the status of the todo', () => {
+  document.innerHTML = ourHtml; 
+  beforeAll(() => {
+    document.body.innerHTML = ourHtml;
+    inputText = document.getElementById('input-todo');
+    inputText.value = 'Mock Test';
+    addTodo();
+  });
+
+  test('check default status', () => {
+    const arr = JSON.parse(localStorage.addlists);
+    expect(arr[0].completed).toBe(false);
+  });
+
+  test('check updated status', () => {
+    const arr = JSON.parse(localStorage.addlists);
+    toggleListCheck(arr[0]);
+    const array = JSON.parse(localStorage.addlists);
+    expect(array[0].completed).toBe(true);  });
 });
