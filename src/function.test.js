@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { addTodo, removeTodo, editTodo, saveEdit, toggleListCheck } from './function.js';
+import { addTodo, removeTodo, editTodo, saveEdit, toggleListCheck, clearDoneList } from './function.js';
 
 let before;
 let after;
