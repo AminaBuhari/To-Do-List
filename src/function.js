@@ -150,5 +150,13 @@ const clearDoneList = () => {
 };
 
 export {
-  addTodo, getData, displayList, removeTodo, getEdit, saveEdit, clearDoneList,
+  addTodo,
+  getData,
+  displayList,
+  removeTodo,
+  getEdit,
+  saveEdit,
+  clearDoneList,
+  editTodo,
+  toggleListCheck,
 };
