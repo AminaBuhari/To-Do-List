@@ -6,8 +6,6 @@ import {
   addTodo, removeTodo, editTodo, saveEdit, toggleListCheck, clearDoneList,
 } from './function.js';
 
-import clearAll from './completed.js';
-
 let before;
 let after;
 let inputText;
