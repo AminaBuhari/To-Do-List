@@ -40,10 +40,6 @@ To get a local copy up and running follow this simple step:
 👤 **Selase**
 
 - GitHub: [@AminaBuhari](https://github.com/dewslyse)
-- Twitter: [@AminaBuhari](https://twitter.com/AminaBuhari)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/Amina)
-
-
 
 ## 🤝 Contributing
 
