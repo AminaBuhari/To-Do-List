@@ -37,6 +37,14 @@ To get a local copy up and running follow this simple step:
 - Twitter: [@AminaBuhari](https://twitter.com/AminaBuhari)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/Amina)
 
+👤 **Selase**
+
+- GitHub: [@AminaBuhari](https://github.com/dewslyse)
+- Twitter: [@AminaBuhari](https://twitter.com/AminaBuhari)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/Amina)
+
+
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
