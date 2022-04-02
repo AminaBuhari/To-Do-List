@@ -11,6 +11,9 @@ This project,implements the CRUD (create, update, delete) methods. All the eleme
 - JavaScript
 - webpack
 
+##Screenshot
+![todo](https://user-images.githubusercontent.com/66526480/161382642-bf497cea-717f-4c81-b280-18538e2724f7.PNG)
+
 ## Live Demo
 
 For a live demo of the Portfolio [click here](https://aminabuhari.github.io/To-Do-List/)
